@@ -35,7 +35,7 @@ const GetTicket = () => {
             </p>
           </div>
           {/* Ticket card */}
-          <div style={{fontFamily: 'robotor'}} className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-4 relative custom-clip-path border border-[#24A0B5] rounded-2xl shadow-md mb-[24px] w-[300px] h-auto flex flex-col">
+          <div style={{fontFamily: 'robotor'}} className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-4 relative custom-clip-path border border-[#24A0B5] rounded-2xl shadow-md mb-[24px] w-[300px] h-[900px] flex flex-col">
             <div className="flex flex-col items-center w-[260px] h-[446px] py-4">
               <div className="mt-[14px]">
                 <h3 style={{fontFamily: 'Roadrage'}} className="text-lg  text-center text-gray-100 text-[34px]">
