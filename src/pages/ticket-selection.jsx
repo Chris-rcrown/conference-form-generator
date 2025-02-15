@@ -29,9 +29,9 @@ const TicketSelection = () => {
       <Form className="bg-[#041E23] p-6 md:p-12 w-full max-w-2xl border border-[#0E464F] rounded-lg">
         
         {/* Header */}
-        <div className="mb-6 border-b-2 border-[#0E464F] pb-2 flex justify-between items-center">
-          <span style={{ fontFamily: "Jeju" }} className="text-2xl md:text-3xl text-white font-bold">Ticket Selection</span>
-          <span style={{ fontFamily: "RobotoR" }} className="text-sm md:text-base text-white">Step 1/3</span>
+        <div className="mb-6 border-b-2 border-[#0E464F]  flex flex-col md:flex-row md:justify-between md:items-center ">
+          <span style={{ fontFamily: "Jeju" }} className="text-2xl md:text-3xl text-white font-bold md:border-b-2 border-[#24A0B5]">Ticket Selection</span>
+          <span style={{ fontFamily: "RobotoR" }} className="text-sm md:text-base text-white border-b-2 border-[#24A0B5] md:border-0 w-[232px] md:w-auto">Step 1/3</span>
         </div>
 
         {/* Event Info */}

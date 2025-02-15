@@ -33,7 +33,7 @@
     visibility: visible;
     position: absolute;
     top: 0;
-    left: ;
+    left: 100 ;
     width: 300px;
     background: linear-gradient(to bottom, #133D44, #031E21) !important;
     color: white; /* Ensure text remains readable */

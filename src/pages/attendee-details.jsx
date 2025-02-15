@@ -86,7 +86,7 @@ const Details = () => {
           <p className="flex justify-between items-center mb-8 border-b-2 border-[#0E464F] w-full text-[#FFFFFF] capitalize">
             <span
               style={{ fontFamily: "Jeju" }}
-              className="text-2xl md:text-3xl border-b-2 border-[#24A0B5]"
+              className="text-2xl md:text-3xl border-b-2 border-[#24A0B5] w-[287px] md:w-[326px]"
             >
               Attendee details
             </span>

@@ -30,7 +30,7 @@ const GetTicket = () => {
       <Header />
       <div className="bg-[#041E23] p-[48px] mb-[32px] w-[700px] max-w-[90vw] border border-[#0E464F] rounded-2xl">
         <div style={{fontFamily: 'robotor'}}>
-          <p className="flex flex-col mb-[32px] md:flex-row justify-between items-center text-[#FFFFFF] border-b-2 border-[#0E464F]">
+          <p className="flex  mb-[32px] md:flex-row justify-between items-center text-[#FFFFFF] border-b-2 border-[#0E464F]">
             <span style={{fontFamily: 'Jeju'}} className="text-[32px] capitalize border-b-2 border-[#24A0B5] w-[232px]">
               Ready
             </span>
