@@ -11,10 +11,10 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState (false);
   return (
     <>
-    <div className="flex justify-between  bg-[#05252C] px-3 py-4 items-center border-2 border-[#197686] rounded-xl w-full h-[76px]">
-      <img src={Logo} alt="logo" className="w-[44px] h-[23px]" />
+    <div style={{fontFamily: 'jeju '}} className="flex justify-between  bg-[#05252C] px-3 py-4 items-center border-2 border-[#197686] rounded-xl w-full h-[76px]">
+      <img src={Logo} alt="logo" className="w-[44px] h-[23px] " />
       
-      <nav>
+      <nav className="flex items-center">
         <ul className="hidden md:flex md:justify-between gap-10"> {NavData.map((data, index)=>(
             <li key={index} className="text-[#B3B3B3] ">
                <NavLink to={data.link}>
@@ -23,13 +23,13 @@ const Header = () => {
             </li>
 
         ))}</ul>
-        <Button className= "md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
+        <Button className= " md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
         </Button>
         {menuOpen && (
-          <ul className="absolute top-16 left-0 bg-[#05252C] w-full flex flex-col items-center py-4 ">
+          <ul className="absolute top-19 left-10 md:hidden bg-[#0E464F] w-[80%] flex flex-col items-center py-4 border-1 border-[#24A0B5] border-t-0 rounded-b-lg ">
             {NavData.map((data, index) => (
-              <li key={index} className="py-2 text-[#B3B3B3} ">
+              <li key={index} className="py-2 text-[#B3B3B3] hover:border-b-2 border-[#24A0B5] ">
                 <NavLink to={data.link} onClick = {() => setMenuOpen(false)} >{data.title}</NavLink>
               </li>
             ))}
