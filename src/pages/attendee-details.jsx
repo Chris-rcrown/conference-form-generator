@@ -182,8 +182,9 @@ const Details = () => {
               id="project-sum"
               className="h-32 text-gray-600 text-lg border border-[#07373F] rounded-lg p-2 bg-transparent w-full"
               placeholder="Textarea"
+              value = {text}
               onChange={(e) => setText(e.target.value)}
-            > {text}</textarea>
+            />
           </div>
 
           {/* Navigation Buttons */}
