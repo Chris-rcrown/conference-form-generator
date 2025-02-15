@@ -115,9 +115,7 @@ const Details = () => {
             >
               <label
                 htmlFor="image"
-                className={`flex flex-col items-center justify-center p-6 h-60 w-60 bg-[#0E464F] border-2 border-[#24A0B5] rounded-2xl transition-opacity duration-300 ${
-                  image ? "opacity-0 hover:opacity-100" : "opacity-100"
-                }`}
+                className={`flex flex-col items-center justify-center p-6 h-60 w-60 bg-[#0E464F] border-2 border-[#24A0B5] rounded-2xl group cursor-pointer relative `}
               >
                 {uploading ? (
                   <p>Uploading...</p>
@@ -127,12 +125,14 @@ const Details = () => {
                     alt="Preview"
                     className="w-full h-full object-cover rounded-lg"
                   />
-                ) : (
-                  <div className="flex flex-col items-center text-center">
+                  
+            
+                ) : ( null )}
+                  <div className={`absolute inset-0 bg-opacity-50  flex flex-col items-center justify-center border rounded-xl text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${image ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`}>
                     <CloudUpload className="h-12 w-12 text-[#FAFAFA]" />
                     <p>Drag & drop or click to upload</p>
                   </div>
-                )}
+              
                 <input
                   type="file"
                   accept="image/*"
