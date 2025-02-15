@@ -9,7 +9,7 @@ import axios from "axios";
 
 const Details = () => {
   const navigate = useNavigate();
-  const { name, setName, email, setEmail, image, setImage } = useGlobal();
+  const { name, setName, email, setEmail, text, setText, image, setImage } = useGlobal();
   const [errors, setErrors] = useState({});
   const [uploading, setUploading] = useState(false);
 
@@ -182,7 +182,8 @@ const Details = () => {
               id="project-sum"
               className="h-32 text-gray-600 text-lg border border-[#07373F] rounded-lg p-2 bg-transparent w-full"
               placeholder="Textarea"
-            />
+              onChange={(e) => setText(e.target.value)}
+            > {text}</textarea>
           </div>
 
           {/* Navigation Buttons */}
