@@ -143,6 +143,7 @@ const Details = () => {
                 />
               </label>
             </div>
+            <br />
             {errors.image && <span className="text-red-500">{errors.image}</span>}
           </div>
 

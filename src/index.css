@@ -21,3 +21,22 @@
     src: url('/font/Alatsi/Alatsi-Regular.ttf');
 }
 
+
+@media print {
+    body {
+      -webkit-print-color-adjust: exact; /* Safari & Chrome */
+      print-color-adjust: exact; /* Modern browsers */
+      visibility: hidden;
+    }
+  
+    #ticket-download {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: ;
+    width: 300px;
+    background: linear-gradient(to bottom, #133D44, #031E21) !important;
+    color: white; /* Ensure text remains readable */
+    }
+  }
+  

@@ -11,8 +11,19 @@ const GetTicket = () => {
 
   const handlePrint = (e) => {
     e.preventDefault()
+    
+    const ticketElement = document.getElementById("ticket-download");
+    if(!ticketElement){
+      console.error("Ticket element not found!");
+      return;
+    }
+    document.body.classList.add("print-mode")
     window.print();
+    setTimeout(() => {
+      document.body.classList.remove("print-mode")
+    })
   };
+
 
   return (
     <div className="flex flex-col items-center bg-[#02191D]">
@@ -35,7 +46,7 @@ const GetTicket = () => {
             </p>
           </div>
           {/* Ticket card */}
-          <div style={{fontFamily: 'robotor'}} className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-4 relative custom-clip-path border border-[#24A0B5] rounded-2xl shadow-md mb-[24px] w-[300px] h-[900px] flex flex-col">
+          <div id="ticket-download" style={{fontFamily: 'robotor'}} className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-4 relative custom-clip-path border border-[#24A0B5] rounded-2xl shadow-md mb-[24px] w-[300px] h-[700px] flex flex-col">
             <div className="flex flex-col items-center w-[260px] h-[446px] py-4">
               <div className="mt-[14px]">
                 <h3 style={{fontFamily: 'Roadrage'}} className="text-lg  text-center text-gray-100 text-[34px]">
@@ -49,9 +60,9 @@ const GetTicket = () => {
               <div className="w-[140px] h-[140px]  my-[32px]">
                 <img src={image} alt="User profile picture" className="border-2 border-[#24A0B5] rounded-2xl" />
               </div>
-              <div className="p-[4px] bg-[#08343C] border border-[#133D44] rounded-xl font-robotor">
+              <div className="p-[4px] bg-[#08343C] border border-[#133D44] rounded-xl font-robotor ">
                 <div className="mt-4 text-sm grid grid-cols-2 gap-[8px] p-[4px] text-gray-200">
-                  <div className="flex flex-col justify-between p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0">
+                  <div className="flex flex-col flex-wrap justify-between p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0 break-words overflow-hidden">
                     <span className="text-[10px] text-gray-400">
                       Enter your name
                     </span>
@@ -59,7 +70,7 @@ const GetTicket = () => {
                       {name}
                     </span>
                   </div>
-                  <div className="flex flex-col justify-between p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0 text-[10px] ">
+                  <div className="flex flex-col flex-wrap justify-between p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0 text-[10px] w-full break-words overflow-hidden ">
                     <span className=" text-gray-400">
                       Enter your Email
                     </span>
