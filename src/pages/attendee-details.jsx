@@ -146,8 +146,8 @@ const Details = () => {
             <br />
             {errors.image && <span className="text-red-500">{errors.image}</span>}
           </div>
-
-          <hr />
+              <p className="text-[#24A0B5] text-[12px] "> Your Photo size should not be more than 1MB </p>
+          <hr/>
 
           {/* Form Inputs */}
           <div style={{ fontFamily: "Robotor" }} className="flex flex-col gap-4">
