@@ -11,7 +11,7 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState (false);
   return (
     <>
-    <div style={{fontFamily: 'jeju '}} className="flex justify-between  bg-[#05252C] px-3 py-4 items-center border-2 border-[#197686] rounded-xl w-full h-[76px]">
+    <div style={{fontFamily: 'jeju '}} className="flex justify-between  bg-[#05252C] px-3 py-4 items-center border-2 border-[#197686] rounded-xl w-full h-[76px] mb-15">
       <img src={Logo} alt="logo" className="w-[44px] h-[23px] " />
       
       <nav className="flex items-center">
