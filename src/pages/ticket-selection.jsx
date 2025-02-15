@@ -24,7 +24,7 @@ const TicketSelection = () => {
   };
 
   return (
-    <div className="flex justify-center p-6 ">
+    <div className="flex justify-center p-6 lg:h-[100vh] ">
       <Form className="bg-[#041E23] p-6 md:p-12 w-full max-w-2xl border border-[#0E464F] rounded-lg ">
         
         {/* Header */}
