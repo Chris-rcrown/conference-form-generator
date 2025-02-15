@@ -168,6 +168,7 @@ const Details = () => {
             </label>
             <input
               type="email"
+              placeholder="✉️"
               className="text-gray-100 text-lg border border-[#07373F] rounded-lg p-2 bg-transparent w-full"
               onChange={(e) => setEmail(e.target.value)}
               required

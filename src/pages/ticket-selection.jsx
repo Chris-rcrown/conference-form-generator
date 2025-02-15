@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Button from "../components/button";
 import Form from "../components/form";
-import { MapPin } from "lucide-react";
 import ticketOptions from "../data/ticketOption";
 import { useGlobal } from "../context/GlobalContext";
 
@@ -36,11 +35,11 @@ const TicketSelection = () => {
 
         {/* Event Info */}
         <div className="bg-[#08252B] p-6 border border-[#0E464F] rounded-lg">
-          <div className="bg-radial from-[#24A0B5] to-[#0A0C11] p-6 text-white text-center rounded-lg border border-[#07373F]">
-            <h1 style={{ fontFamily: "Roadrage" }} className="text-4xl md:text-5xl font-bold">{'Techember Fest "25'}</h1>
-            <p style={{ fontFamily: "RobotoR" }} className="mt-2 text-sm md:text-base">Join us for an unforgettable experience at TechFest! Secure your spot now.</p>
+          <div className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-6 text-white text-center rounded-lg border border-[#07373F]">
+            <h1 style={{ fontFamily: "Roadrage" }} className="text-4xl md:text-5xl ">{'Techember Fest "25'}</h1>
+            <p style={{ fontFamily: "RobotoR" }} className="mt-4 text-sm md:text-base">Join us for an unforgettable experience at <br/> TechFest! Secure your spot now.</p>
             <p style={{ fontFamily: "Roboto" }} className="mt-2 flex items-center justify-center text-sm">
-              <MapPin className="mr-2" /> 04, Rumens Road, Ikoyi, Lagos || March 15, 2025 | 7:00PM
+               📍04, Rumens Road, Ikoyi, Lagos || March 15, 2025 | 7:00PM
             </p>
           </div>
         </div>
