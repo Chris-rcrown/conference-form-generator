@@ -3,12 +3,14 @@ import Button from "../components/button";
 import { useNavigate } from "react-router-dom";
 import LineDivider from "../components/lineDivider";
 import { useGlobal } from "../context/GlobalContext";
+import { Barcode } from "lucide-react";
 
 const GetTicket = () => {
   const navigate = useNavigate();
   const { name, email, ticketType, text, numPeople, image } = useGlobal();
 
-  const handlePrint = () => {
+  const handlePrint = (e) => {
+    e.preventDefault()
     window.print();
   };
 
@@ -44,10 +46,10 @@ const GetTicket = () => {
                   March 15, 2025 | 7:00 PM
                 </p>
               </div>
-              <div className="w-[140px] h-[140px] border-2 border-[#24A0B5] my-[32px]">
-                <img src={image} alt="User profile picture" />
+              <div className="w-[140px] h-[140px]  my-[32px]">
+                <img src={image} alt="User profile picture" className="border-2 border-[#24A0B5] rounded-2xl" />
               </div>
-              <div className="p-[4px] bg-[#08343C] border border-[#133D44] rounded-xl">
+              <div className="p-[4px] bg-[#08343C] border border-[#133D44] rounded-xl font-robotor">
                 <div className="mt-4 text-sm grid grid-cols-2 gap-[8px] p-[4px] text-gray-200">
                   <div className="flex flex-col justify-between p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0">
                     <span className="text-[10px] text-gray-400">
@@ -57,36 +59,36 @@ const GetTicket = () => {
                       {name}
                     </span>
                   </div>
-                  <div className="flex flex-col justify-between p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0">
-                    <span className="text-[10px] text-gray-400">
+                  <div className="flex flex-col justify-between p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0 text-[10px] ">
+                    <span className=" text-gray-400">
                       Enter your Email
                     </span>
                     <span className="font-semibold text-[12px] mt-1">
                       {email}
                     </span>
                   </div>
-                  <div className="flex flex-col justify-between mt-2 p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0">
-                    <span className="text-[10px] text-gray-400">
+                  <div className="flex flex-col justify-between mt-2 p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0 text-[10px] ">
+                    <span className="text-gray-400">
                       Ticket Type:
                     </span>
                     <span className="font-semibold text-[12px] mt-1">
                       {ticketType}
                     </span>
                   </div>
-                  <div className="flex flex-col justify-between mt-2 p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0">
-                    <span className="text-[10px] text-gray-400">
+                  <div className="flex flex-col justify-between mt-2 p-[2px] border border-b-[#12464E] border-r-[#12464E] border-t-0 border-l-0 text-[10px]">
+                    <span className="text-gray-400">
                       Ticket for:
                     </span>
-                    <span className="font-semibold text-[12px] mt-1">
+                    <span className="  mt-1">
                       {numPeople}
                     </span>
                   </div>
                 </div>
-                <div className="flex flex-col gap-[4px] p-[8px]">
-                  <span className="text-[10px] text-gray-400">
+                <div className="flex flex-col gap-[4px] p-[8px] text-[10px]">
+                  <span className=" text-gray-400">
                     Special request
                   </span>
-                  <span className="text-gray-500 mt-2 text-xs italic w-full">
+                  <span className="text-gray-500 mt-2 italic w-full">
                     {text || "No special requests"}
                   </span>
                 </div>
@@ -94,15 +96,18 @@ const GetTicket = () => {
               <div>
                 <LineDivider />
               </div>
-              <div className="mt-1 flex justify-center h-[94px]">
+              <div className="mt-1 flex flex-col items-center justify-center h-[94px]">
                 
-              
-
-                <img
-                  src="../assets/design/barcode.png"
-                  alt="Barcode for the event ticket"
-                  className="w-[100px] h-[500px]"
-                />
+                <div className="flex">
+                <Barcode className="w-auto h-[50px] text-white"/>
+                <Barcode className="w-auto h-[50px] text-white"/>
+                <Barcode className="w-auto h-[50px] text-white"/>
+                <Barcode className="w-auto h-[50px] text-white"/>
+                </div>
+                <p className="flex justify-evenly text-gray-300 gap-4">
+                  <span>234567</span>
+                  <span>891026</span>
+                </p>
               </div>
             </div>
           </div>

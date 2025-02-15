@@ -121,7 +121,7 @@ const Details = () => {
                   <p>Uploading...</p>
                 ) : image ? (
                   <img
-                    src={image}
+                    src={image || null }
                     alt="Preview"
                     className="w-full h-full object-cover rounded-lg"
                   />
@@ -149,14 +149,14 @@ const Details = () => {
           <hr />
 
           {/* Form Inputs */}
-          <div style={{ fontFamily: "Rbotor" }} className="flex flex-col gap-4">
+          <div style={{ fontFamily: "Robotor" }} className="flex flex-col gap-4">
             <label htmlFor="name" className="text-gray-100 text-lg">
               Enter your name
             </label>
             <input
               type="text"
               id="name"
-              className="text-gray-100 text-lg border border-[#07373F] rounded-lg p-2 bg-transparent w-full"
+              className="text-gray-100 text-lg border border-[#07373F] rounded-lg p-2 bg-transparent w-full  "
               onChange={(e) => setName(e.target.value)}
               required
             />
