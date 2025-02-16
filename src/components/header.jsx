@@ -18,7 +18,7 @@ const Header = () => {
       
       <nav className="flex items-center">
         <ul className="hidden md:flex md:justify-between gap-10"> {NavData.map((data, index)=>(
-            <li key={index} className="text-[#B3B3B3] ">
+            <li key={index} className={`text-[#B3B3B3] ${index === 0 ? "hidden" : " "}`}>
                <NavLink to={data.link}>
                     {data.title}
                </NavLink>
@@ -31,7 +31,7 @@ const Header = () => {
         {menuOpen && (
           <ul className="absolute top-19 left-10 md:hidden bg-[#0E464F] w-[80%] flex flex-col items-center py-4 border-1 border-[#24A0B5] border-t-0 rounded-b-lg ">
             {NavData.map((data, index) => (
-              <li key={index} className="py-2 text-[#B3B3B3] hover:border-b-2 border-[#24A0B5] ">
+              <li key={index} className={`py-2 text-[#B3B3B3] hover:border-b-2 border-[#24A0B5] ${index === 0 ? "hidden" : " "}`}>
                 <NavLink to={data.link} onClick = {() => setMenuOpen(false)} >{data.title}</NavLink>
               </li>
             ))}
@@ -44,8 +44,11 @@ const Header = () => {
         className= 'bg-white hover:bg-[#24A0B5] border-1 border-[#D5EA00]  text-[#0A0C11] hover:text-[#d9d9d9] flex gap-2 p-4 transition-all duration-300 uppercase'
         onMouseEnter = {() => setIsHovered(true)}
         onMouseLeave = {() => setIsHovered(false)}
+        
       >
-        my tickets
+        <NavLink to= "/myTickets" >
+          my tickets  
+        </NavLink>
 
         {isHovered ?(
             <MoveUpRight/>

@@ -1,4 +1,8 @@
 export const NavData = [
+        {
+            title: 'Home',
+            link: '/'
+        },
 
         {
             title: 'Events',

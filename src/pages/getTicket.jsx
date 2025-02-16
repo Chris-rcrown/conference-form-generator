@@ -47,13 +47,13 @@ const GetTicket = () => {
             </p>
           </div>
           {/* Ticket card */}
-          <div id="concave" >
+          <div id="concave" className = " h-[600px] border-0  ">
             
                 <div id="ticket-download" style={{fontFamily: 'robotor'}} className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-4 relative custom-clip-path border border-[#24A0B5] rounded-2xl shadow-md mb-[24px] w-[300px] h-[600px] flex flex-col">
-                <div className="concave-blur"></div>
+                {/* <div className="concave-blur"></div>
                 <div className="concave-blur top-[-5px] right-[-5px]"></div>
                 <div className="concave-blur bottom-[-5px] left-[-5px]"></div>
-                <div className="concave-blur bottom-[-5px] right-[-5px]"></div>
+                <div className="concave-blur bottom-[-5px] right-[-5px]"></div> */}
                 <div className="concave-top-left"></div>
                 <div className="concave-top-right"></div>
                 <div className="concave-middle-left"></div>
