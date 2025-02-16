@@ -110,7 +110,7 @@ const GetTicket = () => {
 
             
             {/* divider */}
-            <div className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-4 relative custom-clip-path rounded-2xl">
+            
               <div>
                 <LineDivider />
               </div>
@@ -127,7 +127,7 @@ const GetTicket = () => {
                   <span>891026</span>
                 </p>
               </div>
-              </div>
+              
           </div> 
           {/* ticket end */}
           </div>
