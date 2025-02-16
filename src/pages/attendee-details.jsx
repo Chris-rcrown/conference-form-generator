@@ -195,14 +195,18 @@ const Details = () => {
           <div className="mt-6 flex flex-col items-center justify-center md:flex-row gap-4 w-full">
             <Button
               onClick={() => navigate("/")}
-              className="border border-[#24A0B5] py-2 px-6 w-full md:w-full text-[#24A0B5] hover:bg-[#24A0B5] hover:text-white rounded-lg text-center"
+              className="border border-[#24A0B5] py-2 px-6 w-full md:w-full text-[#24A0B5] hover:bg-[#24A0B5] hover:text-white rounded-lg text-center transition-all duration-300 ease-in-out 
+               transform hover:scale-105 active:scale-95
+               hover:shadow-lg hover:shadow-[#24A0B580]"
             >
               Back
             </Button>
             {selectedTicket && (
             <Button
               onClick={handleNext}
-              className="border border-[#24A0B5] py-2 px-6 w-full md:w-full bg-[#24A0B5] text-white rounded-lg text-center"
+              className="border border-[#24A0B5] py-2 px-6 w-full md:w-full bg-[#24A0B5] text-white rounded-lg text-center transition-all duration-300 ease-in-out 
+                 transform hover:scale-105 active:scale-95
+                 hover:bg-[#1E7D8C] hover:shadow-lg hover:shadow-[#1E7D8C80]"
             >
               {selectedTicket.button}
             </Button>

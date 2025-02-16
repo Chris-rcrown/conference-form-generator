@@ -93,13 +93,17 @@ const TicketSelection = () => {
         <div className="mt-6 flex flex-col md:flex-row gap-4">
           <Button
             onClick={() => navigate("/")}
-            className="border border-[#24A0B5] py-3 px-6 hover:bg-[#24A0B5] w-full md:w-full text-[#24A0B5] hover:text-white text-lg"
+            className="border border-[#24A0B5] py-3 px-6 hover:bg-[#24A0B5] w-full md:w-full text-[#24A0B5] hover:text-white text-lg  transition-all duration-300 ease-in-out 
+               transform hover:scale-105 active:scale-95
+               hover:shadow-lg hover:shadow-[#24A0B580]"
             >
             Cancel
           </Button>
           <Button
             onClick={handleNext}
-            className="border border-[#24A0B5] py-3 px-6 bg-[#24A0B5] w-full md:w-full text-white text-lg"
+            className="border border-[#24A0B5] py-3 px-6 bg-[#24A0B5] w-full md:w-full text-white text-lg transition-all duration-300 ease-in-out 
+                 transform hover:scale-105 active:scale-95
+                 hover:bg-[#1E7D8C] hover:shadow-lg hover:shadow-[#1E7D8C80]"
             >
             Next
           </Button>
