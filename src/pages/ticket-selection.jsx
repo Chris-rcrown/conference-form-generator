@@ -24,8 +24,8 @@ const TicketSelection = () => {
   };
 
   return (
-    <div className="flex justify-center p-6 lg:h-[100vh] ">
-      <Form className="bg-[#041E23] p-6 md:p-12 w-full max-w-2xl border border-[#0E464F] rounded-lg ">
+    <div className="flex justify-center p-6 lg:h-auto ">
+      <Form className="bg-[#041E23] p-6 md:p-12 w-full max-w-2xl border border-[#0E464F] rounded-2xl ">
         
         {/* Header */}
         <div className="mb-6 border-b-2 border-[#0E464F]  flex flex-col md:flex-row md:justify-between md:items-center ">
@@ -34,15 +34,14 @@ const TicketSelection = () => {
         </div>
 
         {/* Event Info */}
-        <div className="bg-[#08252B] p-6 border border-[#0E464F] rounded-lg">
-          <div className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-6 text-white text-center rounded-lg border border-[#07373F]">
+        <div className="bg-[#08252B] p-6 border border-[#0E464F] rounded-2xl">
+          <div className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-6 text-white text-center rounded-2xl border border-[#07373F]">
             <h1 style={{ fontFamily: "Roadrage" }} className="text-4xl md:text-5xl ">{'Techember Fest "25'}</h1>
             <p style={{ fontFamily: "RobotoR" }} className="mt-4 text-sm md:text-base">Join us for an unforgettable experience at <br/> TechFest! Secure your spot now.</p>
             <p style={{ fontFamily: "Roboto" }} className="mt-2 flex items-center justify-center text-sm">
                📍04, Rumens Road, Ikoyi, Lagos || March 15, 2025 | 7:00PM
             </p>
           </div>
-        </div>
 
         {/* Ticket Type Selection */}
         <fieldset className="mt-6">
@@ -80,7 +79,7 @@ const TicketSelection = () => {
             className="mt-2 w-full text-white border border-[#07373F] rounded-lg p-3 cursor-pointer bg-[#12464E]"
             value={numPeople}
             onChange={(e) => setNumpeople(Number(e.target.value))}
-          >
+            >
             {[...Array(6).keys()].map((num) => (
               <option key={num} value={num} className="bg-[#197686] hover:bg-[#24A0B5]">
                 {num}
@@ -95,15 +94,16 @@ const TicketSelection = () => {
           <Button
             onClick={() => navigate("/")}
             className="border border-[#24A0B5] py-3 px-6 hover:bg-[#24A0B5] w-full md:w-full text-[#24A0B5] hover:text-white text-lg"
-          >
+            >
             Cancel
           </Button>
           <Button
             onClick={handleNext}
-            className="border border-[#24A0B5] py-3 px-6 hover:bg-[#24A0B5] w-full md:w-full text-[#24A0B5] hover:text-white text-lg"
-          >
+            className="border border-[#24A0B5] py-3 px-6 bg-[#24A0B5] w-full md:w-full text-white text-lg"
+            >
             Next
           </Button>
+            </div>
         </div>
 
       </Form>

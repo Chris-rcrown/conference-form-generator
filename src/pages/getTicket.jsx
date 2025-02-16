@@ -133,7 +133,7 @@ const GetTicket = () => {
             </Button>
             <Button
               onClick={handlePrint}
-              className="border border-[#24A0B5] py-[12px] px-[24px] hover:bg-[#24A0B5] w-full h-full text-[#24A0B5] hover:text-[#FFFFFF] text-[16px]"
+              className="border border-[#24A0B5] py-[12px] px-[24px] bg-[#24A0B5] w-full h-full text-[#FFFFFF] text-[16px]"
               aria-label="Download ticket"
             >
               Download Ticket

@@ -11,8 +11,10 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState (false);
   return (
     <>
-    <div style={{fontFamily: 'jeju '}} className="flex justify-between  bg-[#05252C] px-3 py-4 items-center border-2 border-[#197686] rounded-xl w-full h-[76px] lg:mb-15">
-      <img src={Logo} alt="logo" className="w-[44px] h-[23px] " />
+    <div style={{fontFamily: 'jeju '}} className="flex justify-between  bg-[#05252C] px-3 py-4 items-center border-2 border-[#197686] rounded-xl w-full lg:w-[1200px] h-[76px] lg:mb-8 lg:mt-7">
+      <NavLink>
+           <img src={Logo} alt="logo" className="w-[91.79px] h-[36px] " />
+      </NavLink>
       
       <nav className="flex items-center">
         <ul className="hidden md:flex md:justify-between gap-10"> {NavData.map((data, index)=>(

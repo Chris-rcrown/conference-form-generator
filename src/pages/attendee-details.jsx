@@ -168,7 +168,7 @@ const Details = () => {
             </label>
             <input
               type="email"
-              placeholder="✉️"
+              placeholder="✉️ hello@avioflagos.io"
               className="text-gray-100 text-lg border border-[#07373F] rounded-lg p-2 bg-transparent w-full"
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -197,7 +197,7 @@ const Details = () => {
             </Button>
             <Button
               onClick={handleNext}
-              className="border border-[#24A0B5] py-2 px-6 w-full md:w-full text-[#24A0B5] hover:bg-[#24A0B5] hover:text-white rounded-lg text-center"
+              className="border border-[#24A0B5] py-2 px-6 w-full md:w-full bg-[#24A0B5] text-white rounded-lg text-center"
             >
               Get My Free Ticket
             </Button>
