@@ -5,6 +5,7 @@ import LineDivider from "../components/lineDivider";
 import { useGlobal } from "../context/GlobalContext";
 import { Barcode } from "lucide-react";
 
+
 const GetTicket = () => {
   const navigate = useNavigate();
   const { name, email, ticketType, text, numPeople, image } = useGlobal();

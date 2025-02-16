@@ -52,8 +52,8 @@ const TicketSelection = () => {
                 key={index}
                 className={`flex flex-col items-start justify-center p-4 rounded-lg text-white border transition-all w-full ${
                   ticketType === ticket.type
-                    ? "bg-[#051214] border-[#197686]"
-                    : "bg-[#12464E] border-[#24A0B5] hover:bg-[#2c545b]"
+                    ? "bg-[#12464E] border-[#197686] hover:bg-[#2c545b]"
+                    : "bg-transparent border-[#24A0B5] hover:bg-[#2c545b]"
                 }`}
                 onClick={(e) => {
                   e.preventDefault();

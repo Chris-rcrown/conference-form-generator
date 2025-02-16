@@ -9,7 +9,7 @@ export const GlobalProvider = ({ children }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
-  const [ticketType, setTicketType] = useState(null);
+  const [ticketType, setTicketType] = useState("");
   const [numPeople, setNumpeople] = useState(1);
   const [image, setImage] = useState("");
   const [currentStep, setCurrentStep] = useState("ticketSelection");

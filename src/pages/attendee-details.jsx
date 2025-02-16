@@ -6,12 +6,16 @@ import { CloudUpload } from "lucide-react";
 import { useGlobal } from "../context/GlobalContext";
 import { useState } from "react";
 import axios from "axios";
+import ticketOptions from "../data/ticketOption.js"
+
 
 const Details = () => {
   const navigate = useNavigate();
-  const { name, setName, email, setEmail, text, setText, image, setImage } = useGlobal();
+  const { name, setName, email, setEmail, text, setText, image, setImage, ticketType } = useGlobal();
   const [errors, setErrors] = useState({});
   const [uploading, setUploading] = useState(false);
+
+    const selectedTicket = ticketOptions.find((ticket) => ticket.type === ticketType)
 
   // Cloudinary Config
   const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dpfhq4yll/upload";
@@ -80,13 +84,13 @@ const Details = () => {
   return (
     <div className="flex flex-col items-center bg-[#02191D]">
       <Header />
-      <Form className="bg-[#041E23] p-6 md:p-12 mb-8 w-[90%] md:w-[700px] border border-[#0E464F]">
+      <Form className="bg-[#041E23] p-6 md:p-12 m-8 w-[90%] md:w-[700px] border border-[#0E464F]">
         {/* Page Title */}
         <div>
           <p className="flex justify-between items-center mb-8 border-b-2 border-[#0E464F] w-full text-[#FFFFFF] capitalize">
             <span
               style={{ fontFamily: "Jeju" }}
-              className="text-2xl md:text-3xl border-b-2 border-[#24A0B5] w-[287px] md:w-[326px]"
+              className="text-2xl md:text-3xl border-b-2 border-[#24A0B5]  w-[200px] md:w-[326px]"
             >
               Attendee details
             </span>
@@ -195,12 +199,14 @@ const Details = () => {
             >
               Back
             </Button>
+            {selectedTicket && (
             <Button
               onClick={handleNext}
               className="border border-[#24A0B5] py-2 px-6 w-full md:w-full bg-[#24A0B5] text-white rounded-lg text-center"
             >
-              Get My Free Ticket
+              {selectedTicket.button}
             </Button>
+            )}
           </div>
         </div>
       </Form>
