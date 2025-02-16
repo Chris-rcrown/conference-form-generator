@@ -47,6 +47,7 @@ const GetTicket = () => {
           </div>
           {/* Ticket card */}
           <div id="ticket-download" style={{fontFamily: 'robotor'}} className="bg-gradient-to-b from-[#133D44] to-[#031E21] p-4 relative custom-clip-path border border-[#24A0B5] rounded-2xl shadow-md mb-[24px] w-[300px] h-[700px] flex flex-col">
+          <div className="border border-[#24A0B5] rounded-2xl">
             <div className="flex flex-col items-center w-[260px] h-[446px] py-4">
               <div className="mt-[14px]">
                 <h3 style={{fontFamily: 'Roadrage'}} className="text-lg  text-center text-gray-100 text-[34px]">
@@ -104,6 +105,7 @@ const GetTicket = () => {
                   </span>
                 </div>
               </div>
+              </div>
               <div>
                 <LineDivider />
               </div>
@@ -121,7 +123,8 @@ const GetTicket = () => {
                 </p>
               </div>
             </div>
-          </div>
+        </div> 
+          {/* ticket end */}
           </div>
           <div style={{fontFamily: 'Jeju'}} className="flex flex-col md:flex-row gap-[24px] mt-[32px]">
             <Button

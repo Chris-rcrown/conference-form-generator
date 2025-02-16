@@ -99,16 +99,16 @@ const Details = () => {
         {/* Form Container */}
         <div
           style={{ fontFamily: "Rbotor" }}
-          className="bg-[#08252B] flex flex-col gap-8 p-6 md:p-8 border border-[#0E464F] rounded-2xl"
+          className="bg-[#08252B] flex flex-col gap-8 p-6 md:p-8 border border-[#0E464F] rounded-3xl"
         >
           {/* Image Upload */}
-          <div className="flex flex-col items-center p-6 bg-[#07373F] border border-[#07373F] rounded-2xl text-gray-100 w-full">
+          <div className="flex flex-col items-center p-6 bg-[#07373F] border border-[#07373F] rounded-3xl text-gray-100 w-full">
             <p className="text-lg text-gray-400 self-start capitalize">
               Upload profile photo
             </p>
 
             <div
-              className="flex justify-center items-center mt-8 h-48 w-full bg-[#052228] border-2 border-[#24A0B5] rounded-2xl "
+              className="flex justify-center items-center mt-8 h-48 w-full bg-[#052228] "
               onDragOver={(e) => e.preventDefault()}
               onDrop={handleDrop}
               onClick={() => document.getElementById("fileInput").click()}
